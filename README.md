@@ -11,7 +11,7 @@ The `GPIO.setmode(GPIO.BCM)` declared means that you need to use the port name, 
 To know both just execute `pinout` on your pi's terminal and use the `GPIO(x)` number.
 If you want to use the physical, change this line to `GPIO.setmode(GPIO.BOARD)`.
 
-I'm using RGB LED but you can use 1 simple LED or two to simulate the higher tempo.
+I'm using RGB LED but you can use 1 simple LED or more to simulate the higher tempo.
 
 ## References
 
