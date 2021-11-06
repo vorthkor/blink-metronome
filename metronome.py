@@ -1,7 +1,8 @@
 # libraries
-import RPi.GPIO as GPIO
 import os
-from time import sleep
+import colors_rgb
+import time_signatures
+
 
 # INITIAL MESSAGE
 os.system('clear')
@@ -17,69 +18,29 @@ print('''\
                 ''')
 print('\n Press ctrl+C to exit...\n')
 
-# disable warnings (optional)
-GPIO.setwarnings(False)
-
-# Select GPIO Mode
-GPIO.setmode(GPIO.BCM)
-
-# set red,green, blue and buzzer pins
-redPin = 12
-bluePin = 19
-greenPin = 13
-buzzerPin = 23
-
-# set pins as outputs
-GPIO.setup(redPin, GPIO.OUT)
-GPIO.setup(greenPin, GPIO.OUT)
-GPIO.setup(bluePin, GPIO.OUT)
-GPIO.setup(buzzerPin, GPIO.OUT)
-
-
-def turnOff():
-    GPIO.output(redPin, GPIO.LOW)
-    GPIO.output(greenPin, GPIO.LOW)
-    GPIO.output(bluePin, GPIO.LOW)
-    GPIO.output(buzzerPin, GPIO.LOW)
-
-
-def red():
-    GPIO.output(redPin, GPIO.HIGH)
-    GPIO.output(greenPin, GPIO.LOW)
-    GPIO.output(bluePin, GPIO.LOW)
-
-
-def green():
-    GPIO.output(redPin, GPIO.LOW)
-    GPIO.output(greenPin, GPIO.HIGH)
-    GPIO.output(bluePin, GPIO.LOW)
-
-
-def blue():
-    GPIO.output(redPin, GPIO.LOW)
-    GPIO.output(greenPin, GPIO.LOW)
-    GPIO.output(bluePin, GPIO.HIGH)
-
-
-def yellow():
-    GPIO.output(redPin, GPIO.HIGH)
-    GPIO.output(greenPin, GPIO.HIGH)
-    GPIO.output(bluePin, GPIO.LOW)
-
 
 def main():
     while True:
-        red()
-        sleep(1)
-        green()
-        sleep(1)
-        blue()
-        sleep(1)
-        green()
-        sleep(1)
+        choose = int(input('''
+                                Choose the time signature:
+                                1 - [2 / 4]    2- [3 / 4]
+                                3 - [4 / 4]    4 - [4 / 8]
+                                ctrl+C to exit
+                                \n'''))
+        if choose == 1:
+            time_signatures.twoFourSignature()
+        elif choose == 2:
+            time_signatures.threeFourSignature()
+        elif choose == 3:
+            time_signatures.fourFourSignature()
+        elif choose == 4:
+            time_signatures.fourEightSignature()
+        else:
+            print('Choose a valid option\n')
 
 
 try:
     main()
 except KeyboardInterrupt:
-    turnOff()
+    colors_rgb.turnOff()
+    print('Thanks!\n')
