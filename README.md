@@ -26,6 +26,7 @@ I'm using RGB LED but you can use 1 simple LED or more to simulate the higher te
 - [Beats calculator][bc]
 - [Python time's sleep][pt]
 - [Using timer][ut]
+- [Raspberry GPIO pinout][xp]
 
 * * *
 
@@ -38,3 +39,4 @@ I'm using RGB LED but you can use 1 simple LED or more to simulate the higher te
   [bc]: https://toolstud.io/music/bpm.php?bpm=100&bpm_unit=4%2F4
   [pt]: https://docs.python.org/3/library/time.html#time.sleep
   [ut]: https://stackoverflow.com/questions/377454/how-do-i-get-my-python-program-to-sleep-for-50-milliseconds
+  [xp]: https://pinout.xyz/#

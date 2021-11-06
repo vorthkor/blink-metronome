@@ -7,9 +7,9 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
 # set red,green, blue
-redPin = 12
-bluePin = 19
-greenPin = 13
+redPin = 16
+bluePin = 6
+greenPin = 5
 
 # set buzzer pin
 buzzerPin = 23
