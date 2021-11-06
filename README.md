@@ -5,9 +5,9 @@ Soon: You can turn on and off both LED and buzzer, you choose what to use.
 
 ## What's new
 
-ver 1.0 - It's set to 4/4 60bpm. Working on new features.
-
 ver 2.0 - Now with a interactive menu to choose between 2/4, 3/4, 4/4 and 4/8 times, still in 60bpm.
+
+ver 1.0 - It's set to 4/4 60bpm. Working on new features.
 
 ## Usage
 
