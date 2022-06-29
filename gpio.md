@@ -11,7 +11,7 @@
                |                       |
                |GPIO17(11) (12)GPIO18  |
                |                       |
- tempsense  [x]|GPIO27(13) (14)GND     |[x]
+            [x]|GPIO27(13) (14)GND     |[x]
                |                       |
                |GPIO22(15) (16)GPIO23  |[X] metronome
                |                       |
@@ -19,7 +19,7 @@
                |                       |
                |GPIO10(19) (20)GND     |[x]
                |                       |
-               |GPIO9(21)  (22)GPIO25  |[x]raito
+               |GPIO9(21)  (22)GPIO25  |[x]
                |                       |
                |GPIO11(23) (24)GPIO8   |
                |                       |
